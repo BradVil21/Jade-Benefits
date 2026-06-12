@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Get a Free Quote | Jade Benefits Health Coverage</title>
+<meta name="description" content="Get a free, no pressure health insurance quote from Jade Benefits in just a few quick steps. Group coverage, truckers, 1099, and family plans. Based in Fort Lauderdale, FL." />
+<meta name="keywords" content="health insurance quote, group coverage quote, trucker insurance quote, 1099 health insurance, free insurance quote" />
+<link rel="canonical" href="https://jadebenefits.com/quote.html" />
+<meta name="robots" content="index,follow" />
+<meta property="og:title" content="Get a Free Quote | Jade Benefits" />
+<meta property="og:description" content="A few quick questions and we will build options around your needs. Free and no pressure." />
+<meta property="og:url" content="https://jadebenefits.com/quote.html" />
+<meta name="theme-color" content="#157347" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<style>
+  .quote-shell{max-width:680px;margin:0 auto}
+  .qcard{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:26px 22px;position:relative;overflow:hidden}
+  .progress-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .progress-head .pct{font-weight:700;color:var(--green-700);font-size:.9rem}
+  .progress-head .stepname{font-size:.82rem;color:var(--muted);font-weight:600}
+  .progress-bar{height:9px;background:var(--green-100);border-radius:999px;overflow:hidden;margin-bottom:24px}
+  .progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--green-600),var(--accent));border-radius:999px;transition:width .5s var(--ease)}
+  .qstep{display:none;animation:fade .35s var(--ease)}
+  .qstep.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .qstep h2{font-size:1.4rem;margin-bottom:4px}
+  .qstep .sub{color:var(--muted);font-size:.94rem;margin-bottom:20px}
+  .opt-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:8px}
+  @media(min-width:520px){.opt-grid{grid-template-columns:1fr 1fr}}
+  .opt{display:flex;align-items:center;gap:12px;border:2px solid var(--line);border-radius:13px;padding:16px;cursor:pointer;transition:border-color .2s,background .2s,transform .15s;background:#fff;font-weight:600;color:var(--ink);font-size:.96rem}
+  .opt:hover{border-color:var(--green-400);transform:translateY(-2px)}
+  .opt.sel{border-color:var(--green-600);background:var(--green-50)}
+  .opt .emoji{font-size:1.35rem;flex-shrink:0}
+  .qfield{margin-bottom:14px}
+  .qfield label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px}
+  .qfield input,.qfield select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;min-height:var(--tap);background:#fff}
+  .qfield input:focus,.qfield select:focus{outline:0;border-color:var(--green-600);box-shadow:0 0 0 4px rgba(26,143,90,.15)}
+  .qnav{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+  .qnav .btn{flex:1}
+  .btn-back{background:#fff;color:var(--muted);border-color:var(--line)}
+  .btn-back:hover{color:var(--ink);border-color:var(--muted);text-decoration:none;background:#fff}
+  .err{color:#b23a1d;font-size:.85rem;font-weight:600;margin-top:6px;display:none}
+  /* loading + success */
+  .loading-screen,.success-screen{display:none;text-align:center;padding:30px 10px}
+  .spinner{width:54px;height:54px;border-radius:50%;border:5px solid var(--green-100);border-top-color:var(--green-600);margin:0 auto 18px;animation:spin .9s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .load-bar{height:9px;background:var(--green-100);border-radius:999px;overflow:hidden;max-width:320px;margin:14px auto 0}
+  .load-fill{height:100%;width:0;background:linear-gradient(90deg,var(--green-600),var(--accent));transition:width .3s linear}
+  .success-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--green-600),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto 16px;box-shadow:var(--shadow)}
+  .trust-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:20px;color:var(--muted);font-size:.86rem}
+  .trust-row span{display:inline-flex;align-items:center;gap:6px}
+  .trust-row .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  /* confetti */
+  #confetti{position:fixed;inset:0;pointer-events:none;z-index:120}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Jade Benefits home"><span class="brand-badge">JB</span><span>Jade Benefits</span></a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="nav-links" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="nav-cta" href="quote.html">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner">
+  <div class="container center">
+    <span class="eyebrow">Free quote</span>
+    <h1>Let us build your options</h1>
+    <p style="margin:0 auto">A few quick questions. No pressure, no fee, and you will see your progress as you go.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container quote-shell">
+    <div class="qcard">
+
+      <!-- Progress -->
+      <div id="progress-wrap">
+        <div class="progress-head">
+          <span class="pct" id="pct">0%</span>
+          <span class="stepname" id="stepname">Step 1 of 5</span>
+        </div>
+        <div class="progress-bar"><div class="progress-fill" id="fill"></div></div>
+      </div>
+
+      <form id="quote-form" novalidate>
+
+        <!-- Step 1 -->
+        <div class="qstep active" data-step="1">
+          <h2>Who is this coverage for?</h2>
+          <p class="sub">Pick the option that fits you best.</p>
+          <div class="opt-grid" data-single>
+            <div class="opt" data-name="audience" data-value="Group coverage"><span class="emoji">&#128101;</span> Group / small business</div>
+            <div class="opt" data-name="audience" data-value="Truckers"><span class="emoji">&#128667;</span> Trucker / owner operator</div>
+            <div class="opt" data-name="audience" data-value="1099 / self-employed"><span class="emoji">&#128188;</span> 1099 / self-employed</div>
+            <div class="opt" data-name="audience" data-value="Family / individual"><span class="emoji">&#128106;</span> Family / individual</div>
+          </div>
+          <div class="err" data-err>Please pick one to continue.</div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="qstep" data-step="2">
+          <h2>How many people need coverage?</h2>
+          <p class="sub">A rough number is fine.</p>
+          <div class="opt-grid" data-single>
+            <div class="opt" data-name="size" data-value="Just me"><span class="emoji">&#128100;</span> Just me</div>
+            <div class="opt" data-name="size" data-value="My family"><span class="emoji">&#127968;</span> My family</div>
+            <div class="opt" data-name="size" data-value="2 to 9"><span class="emoji">&#128101;</span> A team of 2 to 9</div>
+            <div class="opt" data-name="size" data-value="10 to 99"><span class="emoji">&#127970;</span> A team of 10 to 99</div>
+          </div>
+          <div class="err" data-err>Please pick one to continue.</div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="qstep" data-step="3">
+          <h2>What matters most to you?</h2>
+          <p class="sub">Pick the priority that fits best.</p>
+          <div class="opt-grid" data-single>
+            <div class="opt" data-name="priority" data-value="Low monthly premium"><span class="emoji">&#128176;</span> Low monthly premium</div>
+            <div class="opt" data-name="priority" data-value="Low deductible"><span class="emoji">&#128138;</span> Low deductible</div>
+            <div class="opt" data-name="priority" data-value="Nationwide PPO network"><span class="emoji">&#127758;</span> Nationwide PPO network</div>
+            <div class="opt" data-name="priority" data-value="Keep my doctors"><span class="emoji">&#129658;</span> Keep my doctors</div>
+          </div>
+          <div class="err" data-err>Please pick one to continue.</div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="qstep" data-step="4">
+          <h2>When do you want to start?</h2>
+          <p class="sub">No commitment, this just helps us prioritize.</p>
+          <div class="opt-grid" data-single>
+            <div class="opt" data-name="timing" data-value="As soon as possible"><span class="emoji">&#9889;</span> As soon as possible</div>
+            <div class="opt" data-name="timing" data-value="Within 30 days"><span class="emoji">&#128197;</span> Within 30 days</div>
+            <div class="opt" data-name="timing" data-value="Within 90 days"><span class="emoji">&#128336;</span> Within 90 days</div>
+            <div class="opt" data-name="timing" data-value="Just exploring"><span class="emoji">&#128269;</span> Just exploring</div>
+          </div>
+          <div class="err" data-err>Please pick one to continue.</div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="qstep" data-step="5">
+          <h2>Where should we send your options?</h2>
+          <p class="sub">We will reach out within 24 hours. No spam, ever.</p>
+          <div class="qfield"><label for="q-name">Full name</label><input id="q-name" type="text" autocomplete="name" required /></div>
+          <div class="qfield"><label for="q-email">Email</label><input id="q-email" type="email" autocomplete="email" required /></div>
+          <div class="qfield"><label for="q-phone">Phone</label><input id="q-phone" type="tel" autocomplete="tel" required /></div>
+          <div class="qfield"><label for="q-zip">ZIP code</label><input id="q-zip" type="text" inputmode="numeric" autocomplete="postal-code" required /></div>
+          <div class="err" data-err>Please complete the required fields.</div>
+        </div>
+
+        <!-- Nav -->
+        <div class="qnav" id="qnav">
+          <button type="button" class="btn btn-back" id="back" style="display:none">Back</button>
+          <button type="button" class="btn btn-primary" id="next">Continue</button>
+        </div>
+      </form>
+
+      <!-- Loading -->
+      <div class="loading-screen" id="loading">
+        <div class="spinner"></div>
+        <h2 style="font-size:1.3rem">Matching you with the right plans</h2>
+        <p class="sub" id="load-msg">Reviewing top A rated carriers...</p>
+        <div class="load-bar"><div class="load-fill" id="load-fill"></div></div>
+      </div>
+
+      <!-- Success -->
+      <div class="success-screen" id="success">
+        <div class="success-icon">&#10003;</div>
+        <h2 style="font-size:1.5rem">You are all set!</h2>
+        <p class="sub">Thanks for your details. A dedicated Jade Benefits rep will reach out within 24 hours with options built around your answers.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;max-width:320px;margin:18px auto 0">
+          <a class="btn btn-primary" href="tel:+13529494463">Call Now: 352-949-4463</a>
+          <a class="btn btn-secondary" href="index.html">Back to Home</a>
+        </div>
+        <div class="trust-row">
+          <span><span class="dot"></span>Top A rated carriers</span>
+          <span><span class="dot"></span>No fee to you</span>
+          <span><span class="dot"></span>Nationwide coverage</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<canvas id="confetti"></canvas>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="brand"><span class="brand-badge">JB</span><span style="color:#fff">Jade Benefits</span></div>
+        <p class="foot-brand-text">Tailored health coverage for small groups, small business owners, self-employed individuals, families, and truckers. Headquartered in Fort Lauderdale, FL, with nationwide carrier networks.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zM8.5 8.5h3.8v2.1h.05C12.85 9.1 14.6 8 16.7 8c4.1 0 4.85 2.7 4.85 6.2V24h-4v-8.8c0-2.1-.04-4.8-2.93-4.8-2.93 0-3.38 2.3-3.38 4.65V24h-4V8.5z"/></svg></a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we serve</h4>
+        <ul>
+          <li><a href="services.html">Group Coverage</a></li>
+          <li><a href="blog-truckers.html">Truckers</a></li>
+          <li><a href="services.html">1099 &amp; Self-Employed</a></li>
+          <li><a href="services.html">Families &amp; Individuals</a></li>
+          <li><a href="services.html">Trade Industries</a></li>
+          <li><a href="services.html">Medical Groups</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="tel:+13529494463">352-949-4463</a></li>
+          <li><a href="mailto:Chloe@jadebenefits.com">Chloe@jadebenefits.com</a></li>
+          <li>Fort Lauderdale, FL</li>
+          <li>Nationwide coverage</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Jade Benefits. All rights reserved.</span>
+      <span class="foot-legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+<button class="to-top" aria-label="Back to top">&#8593;</button>
+<script src="assets/js/script.js"></script>
+<script>
+(function(){
+  var TOTAL = 5;
+  var current = 1;
+  var data = {};
+
+  var fill = document.getElementById("fill");
+  var pct = document.getElementById("pct");
+  var stepname = document.getElementById("stepname");
+  var nextBtn = document.getElementById("next");
+  var backBtn = document.getElementById("back");
+  var form = document.getElementById("quote-form");
+
+  function showStep(n){
+    document.querySelectorAll(".qstep").forEach(function(s){
+      s.classList.toggle("active", +s.dataset.step === n);
+    });
+    var p = Math.round(((n-1)/TOTAL)*100);
+    fill.style.width = p + "%";
+    pct.textContent = p + "%";
+    stepname.textContent = "Step " + n + " of " + TOTAL;
+    backBtn.style.display = n === 1 ? "none" : "block";
+    nextBtn.textContent = n === TOTAL ? "Get My Quote" : "Continue";
+  }
+
+  /* Option selection */
+  document.querySelectorAll(".opt").forEach(function(opt){
+    opt.addEventListener("click", function(){
+      var group = opt.parentNode;
+      group.querySelectorAll(".opt").forEach(function(o){ o.classList.remove("sel"); });
+      opt.classList.add("sel");
+      data[opt.dataset.name] = opt.dataset.value;
+      hideErr(opt.closest(".qstep"));
+    });
+  });
+
+  function showErr(step){ var e = step.querySelector("[data-err]"); if(e) e.style.display="block"; }
+  function hideErr(step){ var e = step.querySelector("[data-err]"); if(e) e.style.display="none"; }
+
+  function validate(n){
+    var step = document.querySelector('.qstep[data-step="'+n+'"]');
+    if(n < TOTAL){
+      var picked = step.querySelector(".opt.sel");
+      if(!picked){ showErr(step); return false; }
+      return true;
+    }
+    var name = document.getElementById("q-name").value.trim();
+    var email = document.getElementById("q-email").value.trim();
+    var phone = document.getElementById("q-phone").value.trim();
+    var zip = document.getElementById("q-zip").value.trim();
+    var ok = name && /\S+@\S+\.\S+/.test(email) && phone.length >= 7 && zip.length >= 4;
+    if(!ok){ showErr(step); return false; }
+    data.name = name; data.email = email; data.phone = phone; data.zip = zip;
+    return true;
+  }
+
+  nextBtn.addEventListener("click", function(){
+    if(!validate(current)) return;
+    if(current < TOTAL){
+      current++;
+      showStep(current);
+    } else {
+      runLoading();
+    }
+  });
+
+  backBtn.addEventListener("click", function(){
+    if(current > 1){ current--; showStep(current); }
+  });
+
+  /* Loading then success */
+  function runLoading(){
+    form.style.display = "none";
+    document.getElementById("progress-wrap").style.display = "none";
+    var load = document.getElementById("loading");
+    load.style.display = "block";
+    fill.style.width = "100%";
+    var lf = document.getElementById("load-fill");
+    var msg = document.getElementById("load-msg");
+    var msgs = [
+      "Reviewing top A rated carriers...",
+      "Matching nationwide PPO networks...",
+      "Checking deductible and premium options...",
+      "Finalizing your personalized options..."
+    ];
+    var p = 0, mi = 0;
+    var timer = setInterval(function(){
+      p += Math.random()*16 + 8;
+      if(p > 100) p = 100;
+      lf.style.width = p + "%";
+      var idx = Math.min(msgs.length-1, Math.floor(p/26));
+      if(idx !== mi){ mi = idx; msg.textContent = msgs[idx]; }
+      if(p >= 100){
+        clearInterval(timer);
+        setTimeout(showSuccess, 450);
+      }
+    }, 380);
+  }
+
+  function showSuccess(){
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("success").style.display = "block";
+    launchConfetti();
+    document.querySelector(".qcard").scrollIntoView({behavior:"smooth", block:"center"});
+  }
+
+  showStep(1);
+
+  /* ---------- Lightweight confetti (no library) ---------- */
+  function launchConfetti(){
+    var canvas = document.getElementById("confetti");
+    var ctx = canvas.getContext("2d");
+    function size(){ canvas.width = innerWidth; canvas.height = innerHeight; }
+    size(); window.addEventListener("resize", size);
+    var colors = ["#157347","#23a96b","#0db58a","#43c585","#0f5132","#ffd166"];
+    var pieces = [];
+    for(var i=0;i<150;i++){
+      pieces.push({
+        x: Math.random()*canvas.width,
+        y: -20 - Math.random()*canvas.height*0.5,
+        w: 7+Math.random()*7,
+        h: 9+Math.random()*7,
+        c: colors[Math.floor(Math.random()*colors.length)],
+        rot: Math.random()*Math.PI,
+        vr: (Math.random()-0.5)*0.3,
+        vy: 2.5+Math.random()*3.5,
+        vx: (Math.random()-0.5)*2.6,
+        sway: Math.random()*Math.PI
+      });
+    }
+    var start = Date.now();
+    (function frame(){
+      var elapsed = Date.now()-start;
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      pieces.forEach(function(p){
+        p.y += p.vy; p.x += p.vx + Math.sin((p.sway += 0.04))*1.1; p.rot += p.vr;
+        ctx.save();
+        ctx.translate(p.x,p.y); ctx.rotate(p.rot);
+        ctx.fillStyle = p.c;
+        ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+        ctx.restore();
+      });
+      if(elapsed < 4200) requestAnimationFrame(frame);
+      else ctx.clearRect(0,0,canvas.width,canvas.height);
+    })();
+  }
+})();
+</script>
+</body>
+</html>
