@@ -13,13 +13,13 @@ Recommended file names (JPG or PNG, landscape unless noted):
   truckers.jpg          Truckers card / blog hero  (~800x600)
   selfemployed.jpg      Self-employed / 1099 card  (~800x600)
   families.jpg          Families card  (~800x600)
+  smallbusiness.jpg     Small business owners card on Home  (~800x600)
   trades.jpg            Trade industries  (~800x600)
   medical.jpg           Medical groups  (~800x600)
   ppo.jpg               PPO plans card on Services  (~800x600)
   professional.jpg      Professional services card on Services  (~800x600)
   enrollment.jpg        Dedicated enrollment card on Services  (~800x600)
   about.jpg             About page image  (~1000x800)
-  contact.jpg           Contact page image  (~1000x800)
 
 TIP: keep files under ~400 KB each for fast loading. You can compress
 them free at squoosh.app or tinypng.com.

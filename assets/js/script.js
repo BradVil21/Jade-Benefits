@@ -13,7 +13,6 @@
       var open = nav.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
-    // Close menu after tapping a link (mobile)
     nav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
         nav.classList.remove("open");
@@ -22,10 +21,12 @@
     });
   }
 
-  /* ---------- Highlight active nav link ---------- */
-  var here = location.pathname.split("/").pop() || "index.html";
+  /* ---------- Highlight active nav link (clean URLs) ---------- */
+  var here = location.pathname.replace(/\.html$/, "").replace(/\/+$/, "");
+  if (here === "") here = "/";
   document.querySelectorAll(".nav-links a").forEach(function (a) {
-    var href = a.getAttribute("href");
+    var href = a.getAttribute("href").replace(/\.html$/, "").replace(/\/+$/, "");
+    if (href === "") href = "/";
     if (href === here) a.classList.add("active");
   });
 
@@ -83,8 +84,6 @@
   }
 
   /* ---------- Photo fallback to placeholder ---------- */
-  /* If a photo file is not present yet, show a labelled green block
-     so the layout stays clean. Add data-label on the <img>. */
   document.querySelectorAll("img[data-fallback]").forEach(function (img) {
     img.addEventListener("error", function () {
       var label = img.getAttribute("data-label") || "Your photo here";
