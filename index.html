@@ -56,22 +56,25 @@
 }
 </script>
 <style>
-#jb-loader{position:fixed;inset:0;z-index:9999;background:#f4faf7;display:flex;align-items:center;justify-content:center;animation:jbFade .6s ease 1.7s forwards}
+#jb-loader{position:fixed;inset:0;z-index:9999;background:#f4faf7;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#jb-loader.done{opacity:0;visibility:hidden;transition:opacity .55s ease,visibility .55s ease}
 #jb-loader .jb-mark{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:clamp(3.2rem,17vw,6rem);display:flex;line-height:1}
 #jb-loader .jb-j{color:#157347;opacity:0;transform:translateY(16px) scale(.9);animation:jbIn .55s cubic-bezier(.2,.7,.2,1) .15s forwards}
 #jb-loader .jb-b{color:#0b3d2e;opacity:0;transform:translateY(16px) scale(.9);animation:jbIn .55s cubic-bezier(.2,.7,.2,1) .45s forwards;margin-left:-.05em}
-#jb-loader .jb-line{position:absolute;bottom:34%;width:96px;height:3px;border-radius:3px;background:#e3f5ec;overflow:hidden}
-#jb-loader .jb-line::after{content:"";position:absolute;inset:0;width:40%;background:linear-gradient(90deg,#1a8f5a,#0db58a);border-radius:3px;animation:jbBar 1.4s ease .2s forwards}
+#jb-loader .jb-sub{font-family:Georgia,'Times New Roman',serif;font-style:italic;color:#0b3d2e;font-size:clamp(1rem,4.6vw,1.5rem);margin-top:8px;opacity:0;transform:translateY(10px);animation:jbIn .5s ease .8s forwards}
+#jb-loader .jb-line{margin-top:24px;width:170px;height:4px;border-radius:3px;background:#e3f5ec;overflow:hidden;position:relative}
+#jb-loader .jb-line-fill{position:absolute;left:0;top:0;height:100%;width:0;background:linear-gradient(90deg,#1a8f5a,#0db58a);border-radius:3px}
+#jb-loader .jb-pct{margin-top:11px;font-family:'Inter',system-ui,sans-serif;font-weight:700;font-size:.92rem;color:#157347;letter-spacing:.04em}
 @keyframes jbIn{to{opacity:1;transform:none}}
-@keyframes jbBar{0%{transform:translateX(-120%)}100%{transform:translateX(320%)}}
-@keyframes jbFade{to{opacity:0;visibility:hidden}}
-@media (prefers-reduced-motion:reduce){#jb-loader{animation:jbFade .3s ease .2s forwards}#jb-loader .jb-j,#jb-loader .jb-b{animation:none;opacity:1;transform:none}#jb-loader .jb-line{display:none}}
+@media (prefers-reduced-motion:reduce){#jb-loader .jb-j,#jb-loader .jb-b,#jb-loader .jb-sub{animation:none;opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <div id="jb-loader" aria-hidden="true">
   <div class="jb-mark"><span class="jb-j">J</span><span class="jb-b">B</span></div>
-  <div class="jb-line"></div>
+  <div class="jb-sub">Health Insurance</div>
+  <div class="jb-line"><span class="jb-line-fill"></span></div>
+  <div class="jb-pct">0%</div>
 </div>
 
 <header class="site-header">
@@ -101,7 +104,7 @@
         <p class="hero-sub">Jade Benefits helps small groups, small business owners, self-employed individuals, and families find the right plan. Competitive premiums, low deductible options, PPO plans, and dedicated support from people who actually pick up the phone.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="/quote">Get a Free Quote</a>
-          <a class="btn btn-secondary" href="tel:+13529494463">Call 352-949-4463</a>
+          <a class="btn btn-secondary" href="tel:+13529494463">Speak to an Advisor</a>
         </div>
         <div class="hero-meta">
           <span><span class="dot"></span>Top A rated carriers</span>
@@ -122,21 +125,21 @@
     <h2>Carriers we are partnered with</h2>
     <div class="carrier-track-wrap">
       <div class="carrier-track">
-        <div class="carrier">UnitedHealthcare <span class="rated">A</span></div>
-        <div class="carrier accent">Cigna <span class="rated">A</span></div>
-        <div class="carrier">Aetna <span class="rated">A</span></div>
-        <div class="carrier accent">Blue Cross Blue Shield <span class="rated">A</span></div>
-        <div class="carrier">Humana <span class="rated">A</span></div>
-        <div class="carrier accent">Florida Blue <span class="rated">A</span></div>
-        <div class="carrier">Allstate Health <span class="rated">A</span></div>
+        <div class="carrier">UnitedHealthcare</div>
+        <div class="carrier accent">Cigna</div>
+        <div class="carrier">Aetna</div>
+        <div class="carrier accent">Blue Cross Blue Shield</div>
+        <div class="carrier">Humana</div>
+        <div class="carrier accent">Florida Blue</div>
+        <div class="carrier">Allstate Health</div>
         <div class="carrier accent">UnitedHealthcare</div>
-        <div class="carrier">UnitedHealthcare <span class="rated">A</span></div>
-        <div class="carrier accent">Cigna <span class="rated">A</span></div>
-        <div class="carrier">Aetna <span class="rated">A</span></div>
-        <div class="carrier accent">Blue Cross Blue Shield <span class="rated">A</span></div>
-        <div class="carrier">Humana <span class="rated">A</span></div>
-        <div class="carrier accent">Florida Blue <span class="rated">A</span></div>
-        <div class="carrier">Allstate Health <span class="rated">A</span></div>
+        <div class="carrier">UnitedHealthcare</div>
+        <div class="carrier accent">Cigna</div>
+        <div class="carrier">Aetna</div>
+        <div class="carrier accent">Blue Cross Blue Shield</div>
+        <div class="carrier">Humana</div>
+        <div class="carrier accent">Florida Blue</div>
+        <div class="carrier">Allstate Health</div>
         <div class="carrier accent">UnitedHealthcare</div>
       </div>
     </div>
@@ -402,6 +405,27 @@
 <button class="to-top" aria-label="Back to top">&#8593;</button>
 
 <script src="assets/js/script.js"></script>
-<script>setTimeout(function(){var l=document.getElementById("jb-loader");if(l&&l.parentNode)l.parentNode.removeChild(l);},2600);</script>
+<script>
+(function(){
+  var loader=document.getElementById("jb-loader");
+  if(!loader) return;
+  var fill=loader.querySelector(".jb-line-fill");
+  var pct=loader.querySelector(".jb-pct");
+  var p=0;
+  var timer=setInterval(function(){
+    p+=Math.random()*9+5;
+    if(p>100)p=100;
+    if(fill)fill.style.width=p+"%";
+    if(pct)pct.textContent=Math.round(p)+"%";
+    if(p>=100){
+      clearInterval(timer);
+      setTimeout(function(){
+        loader.classList.add("done");
+        setTimeout(function(){ if(loader.parentNode) loader.parentNode.removeChild(loader); },600);
+      },380);
+    }
+  },115);
+})();
+</script>
 </body>
 </html>
