@@ -5,7 +5,7 @@
    on the next line. Full step by step instructions are in the
    google-sheets/SETUP.txt file in your project folder.
    =================================================================== */
-window.JADE_SHEET_ENDPOINT = "https://script.google.com/a/macros/jadebenefits.com/s/AKfycby-m0b6OFzv7Vcc-MgB_JyZBuNBZ3KTTmCtAlxTX3q_b4NYhIx0ReoABCcpgGEOn2c8gA/exec";
+window.JADE_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycby-m0b6OFzv7Vcc-MgB_JyZBuNBZ3KTTmCtAlxTX3q_b4NYhIx0ReoABCcpgGEOn2c8gA/exec";
 
 window.jadeSubmit = function (formType, data) {
   var url = window.JADE_SHEET_ENDPOINT;
