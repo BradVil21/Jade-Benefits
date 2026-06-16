@@ -156,6 +156,7 @@
 <button class="to-top" aria-label="Back to top">&#8593;</button>
 
 <script src="assets/js/script.js"></script>
+<script src="assets/js/sheet.js"></script>
 <script>
   (function(){
     var form = document.getElementById("contact-form");
@@ -164,8 +165,16 @@
     form.addEventListener("submit", function(e){
       e.preventDefault();
       if(!form.checkValidity()){ form.reportValidity(); return; }
+      if(window.jadeSubmit) window.jadeSubmit("contact", {
+        name: document.getElementById("c-name").value.trim(),
+        email: document.getElementById("c-email").value.trim(),
+        phone: document.getElementById("c-phone").value.trim(),
+        type: document.getElementById("c-type").value,
+        message: document.getElementById("c-msg").value.trim()
+      });
       note.style.display = "block";
-      form.querySelector("button[type=submit]").textContent = "Message Ready";
+      form.querySelector("button[type=submit]").textContent = "Message Sent";
+      form.reset();
     });
   })();
 </script>
